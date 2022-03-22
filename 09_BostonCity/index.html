@@ -18,82 +18,137 @@
 </head>
 <body onload="handleImageSlider()">
 <div id="pageWrapper">
-    <!-- HEADER HERE -->
-    <header>
-        <img src="imgs/RoyalCruises.png" alt="Logo">
-    </header>
-        
-    <!-- NAVIGATION HERE -->
-    <div id="navWrapper">
-        <nav class="clearfix">
-            <button onclick="toggleMenu()">&#9776;</button>
-            <ul id="nav-list" class="hide">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CRUISES</a></li>
-                <li><a href="#">AGENTS</a></li>
-                <li><a href="#">BOOK</a></li>
-            </ul>
+<!-- HEADER HERE -->
+<header>
+    <figure class="logo">
+        <img src="imgs/logo0.png" alt="Logo"
+        srcset="imgs/logo1.png 1x, imgs/logo2.png 2x, imgs/logo3.png 3x">
+    </figure>
+    <a href="tel:+18005551234"><h3 class="phone-header hide-small">1-800-555-1234</h3></a>
+</header>
+    
+    
+<!-- NAVIGATION HERE -->
+<div id="navBackground">
+    <div class="navWrapper clearfix">
+        <nav>
+            <button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
             <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit">Submit</button>
+                <form class="search-form">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
+            <ul id="nav-list" class="hide-small">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cruises</a></li>
+                <li><a href="#">Agents</a></li>
+                <li><a href="#">Book</a></li>
+            </ul>
         </nav>
-    </div>  
-        
-    <!-- CONTENT HERE -->
-    <main>
-        <div class="img-slider">
+    </div>
+</div>  
+
+    
+<!-- CONTENT HERE -->
+<main class="clearfix">
+    <div class="img-slider">
+        <picture>
+            <source srcset="imgs/cruise1-small.jpg"
+            media="(max-width: 80rem)">
+            <source srcset="imgs/cruise1.jpg"
+            media="(min-width: 80rem)">
+            <img src="imgs/cruise1.jpg" alt="Two couples on a beach" width="800px">
+        </picture>
+        <picture>
+            <source srcset="imgs/cruise2-small.jpg"
+            media="(max-width: 28.12rem)">
+            <source srcset="imgs/cruise2.jpeg"
+            media="(min-width: 28.12rem)">
+            <img src="imgs/cruise2.jpeg" alt="Girl with white hat looking at cruise ship" width="800px">
+        </picture>
+        <picture>
+            <source srcset="imgs/cruise3-small.jpg"
+            media="(max-width: 28.12rem)">
+            <source srcset="imgs/cruise3.jpg"
+            media="(min-width: 28.12rem)">
+            <img src="imgs/cruise3.jpg" alt="Girl with sunglasses looking at cruise ship" width="800px">
+        </picture>
+        <picture>
+            <source srcset="imgs/cruise4-small.jpg"
+            media="(max-width: 28.12rem)">
+            <source srcset="imgs/cruise4.jpg"
+            media="(min-width: 28.12rem)">
+            <img src="imgs/cruise4.jpg" alt="Group of passengers at pool on cruise ship" width="800px">
+        </picture>
+        <picture>
+            <source srcset="imgs/cruise5-small.jpg"
+            media="(max-width: 28.12rem)">
+            <source srcset="imgs/cruise5.jpg" 
+            media="(min-width: 28.12rem)">
+            <img src="imgs/cruise5.jpg" alt="Cruise ship" width="800px">
+        </picture>
+    </div>
+    <div class="blog">
+        <h3>Recent Blog Articles</h3>
+        <div class="articles-parent">
             <picture>
-                <source srcset="imgs/cruise1-small.jpg"
-                media="(max-width: 80rem)">
-                <source srcset="imgs/cruise1.jpg"
-                media="(min-width: 80rem)">
-                <img src="imgs/cruise1.jpg" alt="Two couples on a beach">
+                <img src="imgs/amusement.jpg" alt="People in a water slide on a raft">
+                <h6>Ride one of our many water slides on deck!</h6>
+                <div>May 1, 2018</div>
             </picture>
             <picture>
-                <source srcset="imgs/cruise2-small.jpeg"
-                media="(max-width: 28.12rem)">
-                <source srcset="imgs/cruise2.jpeg"
-                media="(min-width: 28.12rem)">
-                <img src="imgs/cruise2.jpeg" alt="Girl with white hat looking at cruise ship">
+                <img src="imgs/beach.jpg" alt="A couple lounging on a beach">
+                <h6>Enjoy the pristine beauty of the beaches we visit!</h6>
+                <div>May 1, 2019</div>
             </picture>
             <picture>
-                <source srcset="imgs/cruise3-small.jpg"
-                media="(max-width: 28.12rem)">
-                <source srcset="imgs/cruise3.jpg"
-                media="(min-width: 28.12rem)">
-                <img src="imgs/cruise3.jpg" alt="Girl with sunglasses looking at cruise ship">
+                <img src="imgs/cuisine.jpg" alt="A table of food with happy people">
+                <h6>Try our exquisite cuisine made by professional chefs!</h6>
+                <div>May 1, 2020</div>
             </picture>
             <picture>
-                <source srcset="imgs/cruise4-small.jpg"
-                media="(max-width: 28.12rem)">
-                <source srcset="imgs/cruise4.jpg"
-                media="(min-width: 28.12rem)">
-                <img src="imgs/cruise4.jpg" alt="Group of passengers at pool on cruise ship">
-            </picture>
-            <picture>
-                <source srcset="imgs/cruise5-small.jpg"
-                media="(max-width: 28.12rem)">
-                <source srcset="imgs/cruise5.jpg" 
-                media="(min-width: 28.12rem)">
-                <img src="imgs/cruise5.jpg" alt="Cruise ship">
+                <img src="imgs/rooms.jpg" alt="A neatly made bed">
+                <h6>Relax in our bedrooms with the comfiest matresses</h6>
+                <div>May 1, 2021</div>
             </picture>
         </div>
-    </main>
-        
-    <!-- FOOTER HERE -->
-    <div id="footerWrapper"> 
-        <footer>
-            <p class="footer-ending">&copy; 2021 &bull; Luke Chapman &bull; 10928675@uvu.edu</p>
-        </footer>
-    </div>  
-    
-    <!-- HAMBURGER HERE -->
-    <div id="hamburger">
-        <a class="myjump" href="#links">&#9776;</a>
     </div>
+</main>
+    
+<!-- FOOTER HERE -->   
+<div id="footerWrapper"> 
+    <footer>
+        <div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <h6>CABOT CRUISES<br>
+                    23 South Main St. Suite 16<br>
+                    Lexington, VA 24450
+                </h6>
+                <h4>Phone:</h4>
+                <a href="tel:+18005551234"><h6>1-800-555-1234</h6></a>
+                <h4>Hours of Operation:</h4>
+                <h6>Monday - Friday 9am - 4pm</h6>
+            </div>
+            <div class="newsletter">
+                <h4>News Letter</h4>
+                <p>Subscribe to our email list and stay up-to-date with our hottest offers and latest specials</p>
+                <form>
+                    <input type="email" placeholder="example@mail.com" name="email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="why">
+                <h4>Why Cabot Cruises</h4>
+                <p><b>Cabot Cruises is a travel agency providing the best cruise deals on our online travel website. We can help you with all inclusive vacations including discounted cruises.
+                    <br><br>We do not sell travel to residnets of Delaware, Ohio, Florida, Hawaii, and Washington state because those states are just weird. If you are of one of these states, call your congressman and tell them to change the regulations.
+                </b></p>
+            </div>
+        </div>
+        <p class="footer-ending">&copy; 2021 &bull; Luke Chapman &bull; 10928675@uvu.edu</p>
+    </footer>
+</div> 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>

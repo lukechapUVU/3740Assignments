@@ -401,25 +401,20 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-div#pageWrapper {
-  display: grid;
-  grid-template-areas: "hamburger" "header" "content" "footer" "navigation"; }
+body {
+  font-family: Arial, Helvetica, sans-serif; }
 
 /*----------- HEADER --------------*/
 header {
-  grid-area: header;
-  padding: 2%; }
-  header h1 {
-    margin: 0; }
+  margin: 2%; }
+  header img {
+    width: 50%; }
 
 /*----------- NAV --------------*/
-#navWrapper {
+#navBackground {
   background-color: #73b1e7; }
 
-nav {
-  grid-area: navigation; }
-
-nav button {
+nav .hamburger-btn {
   margin: .2rem 2%;
   background-color: transparent;
   border: none;
@@ -431,7 +426,7 @@ nav ul {
   padding: 0;
   margin: 0; }
 
-nav ul.hide {
+.hide-small {
   display: none; }
 
 nav ul li a {
@@ -439,6 +434,7 @@ nav ul li a {
   padding: .8rem 2%;
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
   border-top: 1px solid rgba(0, 0, 0, 0.3); }
 
 nav ul li a:hover {
@@ -447,17 +443,26 @@ nav ul li a:hover {
 
 .search-container {
   float: right;
-  margin-top: 8px; }
-
-.searchContainer button {
-  float: right;
-  padding: 6px 10px;
+  width: 50%;
   margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer; }
+  margin-right: 5px; }
+  .search-container form.search-form input[type=text] {
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    font-size: 0.8rem;
+    background: #f1f1f1; }
+  .search-container form.search-form button {
+    float: left;
+    width: 30%;
+    font-size: 0.8rem;
+    background: #2196F3;
+    color: white;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer; }
+  .search-container form.search-form button:hover {
+    background: #0b7dda; }
 
 /*----------- HAMBURGER --------------*/
 div#hamburger {
@@ -467,34 +472,68 @@ div#hamburger {
     color: white; }
 
 /*----------- MAIN --------------*/
-main {
-  grid-area: content; }
-
-picture {
+main .img-slider picture {
   width: 100%;
-  margin: 0;
-  position: relative; }
-  picture img {
+  margin: 0; }
+  main .img-slider picture img {
     width: 100%;
     margin: 0; }
-  picture div {
-    padding: 1%;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 0.5rem; }
+main .blog {
+  padding-left: 2%;
+  padding-right: 2%; }
+  main .blog .articles-parent {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr; }
+    main .blog .articles-parent picture {
+      position: relative;
+      width: 98%;
+      margin: 1%; }
+      main .blog .articles-parent picture img {
+        width: 100%; }
+      main .blog .articles-parent picture h6 {
+        position: absolute;
+        margin-bottom: 1rem;
+        bottom: 2px;
+        padding: 1%;
+        background-color: rgba(255, 255, 255, 0.6); }
+      main .blog .articles-parent picture div {
+        padding: 1%;
+        width: 100%;
+        position: absolute;
+        bottom: 4px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 0.5rem; }
 
 /*----------- FOOTER --------------*/
 #footerWrapper {
   background-color: #73b1e7; }
 
 footer {
-  grid-area: footer;
-  padding: 0 2%;
-  color: white;
-  font-size: 0.8rem;
-  text-align: center; }
+  margin-top: 2%;
+  padding: 2%;
+  color: white; }
+  footer h4 {
+    margin: 4% 0 2% 0; }
+  footer a {
+    color: white; }
+  footer h6 {
+    margin: 0; }
+  footer p {
+    font-size: 0.6rem;
+    margin: 0; }
+  footer input {
+    font-size: 0.8rem;
+    margin-top: 1%; }
+  footer button {
+    font-size: 0.8rem;
+    width: 165px;
+    margin-top: 1%;
+    border-radius: 8px; }
+  footer .footer-ending {
+    padding-top: 5%;
+    text-align: center; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -707,21 +746,23 @@ footer {
   display: none; }
 
 @media only screen and (min-width: 35rem) {
-  div#pageWrapper {
-    display: grid;
-    grid-template-areas: "header" "navigation" "content" "footer" "hamburger"; }
-
   /*----------- HEADER --------------*/
-  header h1 {
-    font-size: 2.5rem; }
-  header h3 {
-    font-size: 1.5rem; }
+  header {
+    position: relative; }
+    header h3 {
+      color: black;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-right: 5px; }
+    header img {
+      width: 33%; }
 
   /*----------- NAV --------------*/
-  nav button {
+  nav .hamburger-btn {
     display: none; }
 
-  nav ul.hide {
+  .hide-small {
     display: block; }
 
   nav ul li {
@@ -731,15 +772,15 @@ footer {
     border: none;
     padding: .6rem 1rem; }
 
+  .search-container {
+    width: 30%; }
+
   /*----------- MAIN --------------*/
   .card-parent {
     grid-template-columns: 1fr 1fr; }
 
   picture div {
     font-size: 1rem; }
-
-  .tourism h3 {
-    font-size: 1.5rem; }
 
   /*----------- FOOTER --------------*/
   footer {
@@ -750,19 +791,21 @@ footer {
     max-width: 64rem;
     margin: auto; }
 
+  .navWrapper {
+    max-width: 64rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64rem; }
+
   /*----------- HEADER --------------*/
-  header h1 {
-    font-size: 3rem; }
-  header h3 {
-    font-size: 1.7rem; }
+  header img {
+    width: 25%; }
 
   /*----------- NAV --------------*/
   /*----------- MAIN --------------*/
   .card-parent {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
-
-  .tourism h3 {
-    font-size: 2rem; }
 
   /*----------- FOOTER --------------*/
   footer {

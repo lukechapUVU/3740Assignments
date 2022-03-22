@@ -7,10 +7,10 @@ function handleImageSlider() {
             speed: 100,
             cssEase: 'ease-out',
             autoplay: true,
-            autoplaySpeed: 10000  
+            autoplaySpeed: 1000  
         })
     })
 }
 function toggleMenu() {
-    document.getElementById("nav-list").classList.toggle("hide");
+    document.getElementById("nav-list").classList.toggle("hide-small");
 }
