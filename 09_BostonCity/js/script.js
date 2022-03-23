@@ -7,7 +7,7 @@ function handleImageSlider() {
             speed: 100,
             cssEase: 'ease-out',
             autoplay: true,
-            autoplaySpeed: 1000  
+            autoplaySpeed: 8000  
         })
     })
 }
