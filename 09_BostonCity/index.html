@@ -5,7 +5,7 @@
 <meta name="author" content="Luke Chapman">
 
 <!-- This start file was build by Paul Cheney  -->
-<title>Boston City</title>
+<title>Cabot Cruises</title>
 
 <script src="https://kit.fontawesome.com/968a431ae4.js" crossorigin="anonymous"></script>
 
@@ -30,7 +30,7 @@
     
 <!-- NAVIGATION HERE -->
 <div id="navBackground">
-    <div class="navWrapper clearfix">
+    <div id="navWrapper">
         <nav>
             <button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
             <div class="search-container">
@@ -42,7 +42,12 @@
             <ul id="nav-list" class="hide-small">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Cruises</a></li>
-                <li><a href="#">Agents</a></li>
+                <li class="nav-parent" onclick="toggleSubMenu()"><a href="#">Agents</a>
+                    <ul id="subnav-list" class="hide-sub">
+                        <li><a href="#">Sally Rogers</a></li>
+                        <li><a href="#">Buddy Sorrell</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Book</a></li>
             </ul>
         </nav>
@@ -119,17 +124,19 @@
 <!-- FOOTER HERE -->   
 <div id="footerWrapper"> 
     <footer>
-        <div>
-            <div class="contact">
-                <h4>Contact Us</h4>
-                <h6>CABOT CRUISES<br>
-                    23 South Main St. Suite 16<br>
-                    Lexington, VA 24450
-                </h6>
-                <h4>Phone:</h4>
-                <a href="tel:+18005551234"><h6>1-800-555-1234</h6></a>
-                <h4>Hours of Operation:</h4>
-                <h6>Monday - Friday 9am - 4pm</h6>
+        <div class="footerParent">
+            <div class="footerChild">
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <h6>CABOT CRUISES<br>
+                        23 South Main St. Suite 16<br>
+                        Lexington, VA 24450
+                    </h6>
+                    <h4>Phone:</h4>
+                    <a href="tel:+18005551234"><h6>1-800-555-1234</h6></a>
+                    <h4>Hours of Operation:</h4>
+                    <h6>Monday - Friday 9am - 4pm</h6>
+                </div>
             </div>
             <div class="newsletter">
                 <h4>News Letter</h4>
@@ -146,7 +153,16 @@
                 </b></p>
             </div>
         </div>
-        <p class="footer-ending">&copy; 2021 &bull; Luke Chapman &bull; 10928675@uvu.edu</p>
+        <div class="footer-ending">
+            <div class="social">
+                <a href="#"><img src="imgs/facebook.png" alt="facebook icon"></a>
+                <a href="#"><img src="imgs/youtube.png" alt="youtube icon"></a>
+                <a href="#"><img src="imgs/instagram.png" alt="instagram icon"></a>
+                <a href="#"><img src="imgs/pinterest.png" alt="pinterest icon"></a>
+                <a href="#"><img src="imgs/twitter.png" alt="twitter icon"></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2021 &bull; Luke Chapman &bull; 10928675@uvu.edu</p>
     </footer>
 </div> 
 </div>

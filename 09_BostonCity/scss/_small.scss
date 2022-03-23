@@ -25,7 +25,10 @@ header {
 
 /*----------- NAV --------------*/
 #navBackground {
-    background-color: #73b1e7;
+    background-color: #004687;
+}
+nav {
+    z-index: 998;
 }
 nav .hamburger-btn {
     margin: .2rem 2%;
@@ -34,61 +37,101 @@ nav .hamburger-btn {
     font-size: 1.6rem;
     color: white;
 }
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 .hide-small {
     display: none;
 }
-nav ul li a {
-    display: block;
-    padding: .8rem 2%;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+.hide-sub {
+    display: none;
 }
-nav ul li a:hover {
-    background-color: rgba(0,0,0, 0.4);
-    color: white;
+nav ul li ul {
+    display: block;
 }
 .search-container {
     float: right;
     width: 50%;
     margin-top: 8px;
     margin-right: 5px;
-    form.search-form input[type=text] {
-        border: 1px solid grey;
-        float: left;
-        width: 70%;
-        font-size: 0.8rem;
-        background: #f1f1f1;
-    }
-    
-    form.search-form button {
-        float: left;
-        width: 30%;
-        font-size: 0.8rem;
-        background: #2196F3;
-        color: white;
-        border: 1px solid grey;
-        border-left: none; 
-        cursor: pointer;
-    }
-    form.search-form button:hover {
-        background: #0b7dda;
+    form.search-form {
+        input[type=text] {
+            border: 1px solid grey;
+            float: left;
+            width: 70%;
+            font-size: 0.8rem;
+            background: #f1f1f1;
+        }
+        button {
+            float: left;
+            width: 30%;
+            font-size: 0.8rem;
+            background: #2196F3;
+            color: white;
+            border: 1px solid grey;
+            border-left: none; 
+            cursor: pointer;
+        }
+        :hover {
+            background: #0b7dda;
+        }
     }
 }
+ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+li ul {
+    display: none;
+}
+ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    text-transform: uppercase;
+}
+ul li a:hover {
+    background-color: rgb(0,0,0);
+}
+li:hover > ul {
+    z-index: 998;
+    position: absolute;
+}
+/* Remove float from dropdown lists */
+li:hover li {
+    float: none;
+}
+li:hover a {
+    background-color: #004687;
+}
+li:hover li a:hover {
+    background-color: rgb(0,0,0);
+}
+.main-navigation li ul li {
+    border-top: 0;
+}
+/* Displays second level dropdowns to the right of the first level dropdown */
+ul ul ul {
+    left: 100%;
+    top: 0; 
+}
 
-/*----------- HAMBURGER --------------*/
-div#hamburger {
-    grid-area: hamburger;
-    background-color: black;
-    a {
-        color: white;
-    }
+
+/* Simple clearfix */
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after {
+    clear: both;
 }
 
 /*----------- MAIN --------------*/
@@ -107,21 +150,29 @@ main {
     .blog {
         padding-left: 2%;
         padding-right: 2%;
+        h3 {
+            padding: 1%;
+            background-color: #B72126;
+            color: white;
+            margin-bottom: 0;
+        }
         .articles-parent {
             display: grid;
             grid-template-rows: auto;
             grid-template-columns: 1fr 1fr;
             picture {
+                
                 position: relative;
                 width: 98%;
                 margin: 1%;
+                margin-top: 0;
                 img {
                     width: 100%;
                 }
                 h6 {
                     position: absolute;
                     margin-bottom: 1rem;
-                    bottom: 2px;
+                    bottom: 0;
                     padding: 1%;
                     background-color: rgba(255, 255, 255, 0.6);
                 }
@@ -142,7 +193,7 @@ main {
 
 /*----------- FOOTER --------------*/
 #footerWrapper {
-    background-color: #73b1e7;
+    background-color: #004687;
 }
 footer {
     margin-top: 2%;
@@ -173,6 +224,22 @@ footer {
     }
     .footer-ending {
         padding-top: 5%;
+        text-align: center;
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a {
+                flex: 0 0 30%;
+                img {
+                    width: 40px;
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 5%;
         text-align: center;
     }
 }

@@ -14,3 +14,7 @@ function handleImageSlider() {
 function toggleMenu() {
     document.getElementById("nav-list").classList.toggle("hide-small");
 }
+function toggleSubMenu() {
+    console.log('test')
+    document.getElementById("subnav-list").classList.toggle("hide-sub");
+}
