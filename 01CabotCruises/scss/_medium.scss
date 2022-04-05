@@ -16,6 +16,9 @@
     }
     
     /*----------- NAV --------------*/
+    nav {
+        width: 115%;
+    }
     nav .hamburger-btn {
         display: none;
     }
@@ -30,7 +33,11 @@
         padding: .6rem 1rem;
     }
     .search-container {
-        width: 30%;
+        width: 45%;
+        float: right;
+        form input {
+            width: 180px;
+        }
         form.search-form input[type=text] {
             font-size: 1rem;
         }

@@ -29,6 +29,8 @@ header {
 }
 nav {
     z-index: 998;
+    position: relative;
+    width: 130%;
 }
 nav .hamburger-btn {
     margin: .2rem 2%;
@@ -47,21 +49,36 @@ nav ul li ul {
     display: block;
 }
 .search-container {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
     width: 50%;
+    height: 10px;
     margin-top: 8px;
     margin-right: 5px;
+    form input {
+        width: 120px;
+    }
     form.search-form {
+        .search-button {
+            float: right;
+        }
+        .search-bar {
+            float: right;
+        }
         input[type=text] {
+            height: 25px;
             border: 1px solid grey;
-            float: left;
-            width: 70%;
+            margin: 0;
+            padding: 0;
             font-size: 0.8rem;
             background: #f1f1f1;
         }
         button {
-            float: left;
-            width: 30%;
+            height: 25px;
+            margin: 0;
             font-size: 0.8rem;
             background: #2196F3;
             color: white;
@@ -115,7 +132,6 @@ li:hover li a:hover {
 .main-navigation li ul li {
     border-top: 0;
 }
-/* Displays second level dropdowns to the right of the first level dropdown */
 ul ul ul {
     left: 100%;
     top: 0; 
@@ -138,10 +154,10 @@ ul:after {
 main {
     .img-slider {
         picture {
-            width: 100%;
+            width: 100vw;
             margin: 0;
             img {
-                width: 100%;
+                width: 100vw;
                 margin: 0;
             }
         }
@@ -161,7 +177,6 @@ main {
             grid-template-rows: auto;
             grid-template-columns: 1fr 1fr;
             picture {
-                
                 position: relative;
                 width: 98%;
                 margin: 1%;
