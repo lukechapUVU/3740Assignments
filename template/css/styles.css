@@ -528,10 +528,10 @@ ul:after {
 
 /*----------- MAIN --------------*/
 main .img-slider picture {
-  width: 100vw;
+  width: 100%;
   margin: 0; }
   main .img-slider picture img {
-    width: 100vw;
+    width: 100%;
     margin: 0; }
 main .blog {
   padding-left: 2%;
