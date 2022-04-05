@@ -467,7 +467,7 @@ nav ul li ul {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer; }
-  .search-container form.search-form :hover {
+  .search-container form.search-form button:hover {
     background: #0b7dda; }
 
 ul {
