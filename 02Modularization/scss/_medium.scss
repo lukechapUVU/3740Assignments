@@ -1,0 +1,94 @@
+
+
+    /*----------- HEADER --------------*/
+    header {
+        position: relative;
+        h3 {
+            color: black;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-right: 5px;
+        }
+        img {
+            width: 33%;
+        }
+    }
+    
+    /*----------- NAV --------------*/
+    nav {
+        width: 115%;
+    }
+    nav .hamburger-btn {
+        display: none;
+    }
+    .hide-small {
+        display: block;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        border: none;
+        padding: .6rem 1rem;
+    }
+    .search-container {
+        width: 45%;
+        float: right;
+        form input {
+            width: 180px;
+        }
+        form.search-form input[type=text] {
+            font-size: 1rem;
+        }
+        form.search-form button {
+            font-size: 1rem;
+        }
+    }
+    li:hover > ul {
+        display: block;
+    }
+
+    
+    
+    
+    /*----------- MAIN --------------*/
+    main .blog {
+        .articles-parent {
+            grid-template-columns: 1fr 1fr 1fr;
+            picture {
+                div {
+                    font-size: 0.7rem;
+                }
+                h6 {
+                    margin-bottom: 1.3rem;
+                    font-size: 0.8rem;
+                }
+            } 
+          
+        }
+    }
+    
+    /*----------- FOOTER --------------*/
+    footer {
+        h4 {
+            font-size: 1.2rem;
+        }
+        h6 {
+            font-size: .9rem;
+        }
+        p {
+            font-size: .8rem;
+        }
+        font-size: 1rem;
+        .footerParent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .why {
+                grid-column: 1 / span 2;
+            }
+        }
+        .footer-ending .social a {
+            flex: 0 0 20%;
+        }
+    }
