@@ -491,6 +491,11 @@ ul li a {
   color: #fff;
   text-transform: uppercase; }
 
+ul li.active {
+  background-color: #002c54; }
+  ul li.active a {
+    color: orange; }
+
 ul li a:hover {
   background-color: black; }
 
@@ -566,6 +571,18 @@ main .blog {
         background-color: rgba(0, 0, 0, 0.6);
         color: white;
         font-size: 0.5rem; }
+
+#cruises-page {
+  margin: auto 2%; }
+  #cruises-page img {
+    width: 100%; }
+  #cruises-page button {
+    margin-bottom: 2%;
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 4px black; }
 
 /*----------- FOOTER --------------*/
 #footerWrapper {
@@ -941,5 +958,3 @@ footer {
       margin-left: auto;
       width: 50%; } }
 /* end of media query */
-
-/*# sourceMappingURL=styles.css.map */

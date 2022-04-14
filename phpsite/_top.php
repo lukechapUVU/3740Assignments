@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="author" content="Luke Chapman">
 
-<!-- This start file was build by Paul Cheney  -->
-<title>Cabot Cruises</title>
+<title>CABOT CRUISES: <?php echo $title; ?></title>
 
 <script src="https://kit.fontawesome.com/968a431ae4.js" crossorigin="anonymous"></script>
 
@@ -44,15 +43,15 @@
                 </form>
             </div>
             <ul id="nav-list" class="hide-small">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cruises</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="cruises.php">Cruises</a></li>
                 <li class="nav-parent" onclick="toggleSubMenu()"><a href="#">Agents</a>
                     <ul id="subnav-list" class="hide-sub">
                         <li><a href="#">Sally Rogers</a></li>
                         <li><a href="#">Buddy Sorrell</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Book</a></li>
+                <li><a href="book.php">Book</a></li>
             </ul>
         </nav>
     </div>

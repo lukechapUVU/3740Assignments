@@ -1,4 +1,4 @@
-<?php $title='Home'; include '_top.php';?>
+<?php $title='Book'; include '_top.php';?>
     <div class="img-slider">
         <picture>
             <source srcset="imgs/cruise1-small.jpg"
@@ -37,7 +37,7 @@
         </picture>
     </div>
     <div class="blog">
-        <h3>Recent Blog Articles</h3>
+        <h3>Book</h3>
         <div class="articles-parent">
             <picture>
                 <img src="imgs/amusement.jpg" alt="People in a water slide on a raft">
