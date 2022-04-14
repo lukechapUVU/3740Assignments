@@ -99,7 +99,6 @@ ul {
 ul li {
     display: block;
     position: relative;
-    float: left;
 }
 li ul {
     display: none;
@@ -117,9 +116,8 @@ ul li a:hover {
 }
 li:hover > ul {
     z-index: 998;
-    position: absolute;
+    padding-left: 40px;
 }
-/* Remove float from dropdown lists */
 li:hover li {
     float: none;
 }
@@ -137,13 +135,10 @@ ul ul ul {
     top: 0; 
 }
 
-
-/* Simple clearfix */
-
 ul:before,
 ul:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " "; 
+    display: table; 
 }
 
 ul:after {

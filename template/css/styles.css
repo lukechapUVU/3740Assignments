@@ -477,8 +477,7 @@ ul {
 
 ul li {
   display: block;
-  position: relative;
-  float: left; }
+  position: relative; }
 
 li ul {
   display: none; }
@@ -496,9 +495,8 @@ ul li a:hover {
 
 li:hover > ul {
   z-index: 998;
-  position: absolute; }
+  padding-left: 40px; }
 
-/* Remove float from dropdown lists */
 li:hover li {
   float: none; }
 
@@ -515,13 +513,10 @@ ul ul ul {
   left: 100%;
   top: 0; }
 
-/* Simple clearfix */
 ul:before,
 ul:after {
   content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+  display: table; }
 
 ul:after {
   clear: both; }
@@ -858,7 +853,9 @@ footer {
       font-size: 1rem; }
 
   li:hover > ul {
-    display: block; }
+    display: block;
+    position: absolute;
+    padding-left: 0; }
 
   /*----------- MAIN --------------*/
   main .blog .articles-parent {
@@ -885,7 +882,6 @@ footer {
         grid-column: 1 / span 2; }
     footer .footer-ending .social a {
       flex: 0 0 20%; } }
-/* end of media query */
 @media only screen and (min-width: 64rem) {
   header, nav, main, footer {
     max-width: 64rem;
@@ -940,6 +936,3 @@ footer {
       margin-right: auto;
       margin-left: auto;
       width: 50%; } }
-/* end of media query */
-
-/*# sourceMappingURL=styles.css.map */

@@ -47,7 +47,10 @@
     }
     li:hover > ul {
         display: block;
+        position: absolute;
+        padding-left: 0;
     }
+    
 
     
     
