@@ -886,6 +886,11 @@ footer {
       margin-bottom: 1.3rem;
       font-size: 0.8rem; }
 
+  #cruises-page img {
+    width: 33%; }
+  #cruises-page button {
+    width: 10%; }
+
   /*----------- FOOTER --------------*/
   footer {
     font-size: 1rem; }
