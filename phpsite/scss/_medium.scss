@@ -69,11 +69,28 @@
         }
     }
     #cruises-page {
-        img {
-            width: 33%;
+        .cruises-parent {
+            display: grid;
+            grid-template-columns: 0.66fr 1.33fr;
+            grid-template-rows: auto;
+            :nth-child(2) {
+                margin-left: 3%;
+            }
         }
         button {
-            width: 10%;
+            float: right;
+            width: 30%;
+        }
+    }
+    #agents-page {
+        img {
+            width: 50%;
+            float: right;
+        }
+    }
+    #book-page {
+        form input {
+            width: 60%;
         }
     }
     

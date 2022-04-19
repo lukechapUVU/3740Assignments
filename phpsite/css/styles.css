@@ -467,7 +467,7 @@ nav ul li ul {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer; }
-  .search-container form.search-form :hover {
+  .search-container form.search-form button:hover {
     background: #0b7dda; }
 
 ul {
@@ -578,11 +578,34 @@ main .blog {
     width: 100%; }
   #cruises-page button {
     margin-bottom: 2%;
+    height: 40px;
     width: 100%;
     background-color: darkblue;
     color: white;
     border-radius: 15px;
     box-shadow: 2px 4px black; }
+
+#agents-page {
+  margin: auto 2%; }
+  #agents-page img {
+    width: 100%;
+    margin-bottom: 2%;
+    border-radius: 10px; }
+
+#book-page {
+  margin: auto 2%; }
+  #book-page form input {
+    width: 100%;
+    border-width: 0px;
+    background-color: lightgray;
+    height: 30px; }
+  #book-page .required-field {
+    border-left-width: 3px;
+    border-left-color: red; }
+  #book-page input[type=submit] {
+    background-color: #004687;
+    color: white;
+    height: 40px; }
 
 /*----------- FOOTER --------------*/
 #footerWrapper {
@@ -886,10 +909,22 @@ footer {
       margin-bottom: 1.3rem;
       font-size: 0.8rem; }
 
-  #cruises-page img {
-    width: 33%; }
+  #cruises-page .cruises-parent {
+    display: grid;
+    grid-template-columns: 0.66fr 1.33fr;
+    grid-template-rows: auto; }
+    #cruises-page .cruises-parent :nth-child(2) {
+      margin-left: 3%; }
   #cruises-page button {
-    width: 10%; }
+    float: right;
+    width: 30%; }
+
+  #agents-page img {
+    width: 50%;
+    float: right; }
+
+  #book-page form input {
+    width: 60%; }
 
   /*----------- FOOTER --------------*/
   footer {
@@ -928,6 +963,13 @@ footer {
     padding: 0; }
     main .blog .articles-parent {
       grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+  #agents-page img {
+    width: 33%;
+    margin-right: 10%; }
+
+  #book-page form input {
+    width: 40%; }
 
   /*----------- FOOTER --------------*/
   footer {

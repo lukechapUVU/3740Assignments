@@ -86,7 +86,7 @@ nav ul li ul {
             border-left: none; 
             cursor: pointer;
         }
-        :hover {
+        button:hover {
             background: #0b7dda;
         }
     }
@@ -219,6 +219,7 @@ main {
     }
     button {
         margin-bottom: 2%;
+        height: 40px;
         width: 100%;
         background-color: darkblue;
         color: white;
@@ -226,6 +227,35 @@ main {
         box-shadow: 2px 4px black;
     }
 }
+
+#agents-page {
+    margin: auto 2%;
+    img {
+        width: 100%;
+        margin-bottom: 2%;
+        border-radius: 10px;
+    }
+}
+
+#book-page {
+    margin: auto 2%;
+    form input {
+        width: 100%;
+        border-width: 0px;
+        background-color: lightgray;
+        height: 30px;
+    }
+    .required-field {
+        border-left-width: 3px;
+        border-left-color: red;
+    }
+    input[type=submit] {
+        background-color: #004687;
+        color: white;
+        height: 40px;
+    }
+}
+
 
 /*----------- FOOTER --------------*/
 #footerWrapper {

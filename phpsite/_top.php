@@ -47,8 +47,8 @@
                 <li><a href="cruises.php">Cruises</a></li>
                 <li class="nav-parent" onclick="toggleSubMenu()"><a href="#">Agents</a>
                     <ul id="subnav-list" class="hide-sub">
-                        <li><a href="#">Sally Rogers</a></li>
-                        <li><a href="#">Buddy Sorrell</a></li>
+                        <li><a href="sally.php">Sally Rogers</a></li>
+                        <li><a href="buddy.php">Buddy Sorrell</a></li>
                     </ul>
                 </li>
                 <li><a href="book.php">Book</a></li>

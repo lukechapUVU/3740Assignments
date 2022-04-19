@@ -15,8 +15,23 @@ function toggleMenu() {
     document.getElementById("nav-list").classList.toggle("hide-small");
 }
 function toggleSubMenu() {
-    console.log('test')
     document.getElementById("subnav-list").classList.toggle("hide-sub");
+}
+function checkRequired() {
+    var nameID = document.getElementById("name");
+    if(nameID.value != (null || '')) {
+        nameID.classList.remove('required-field');
+    }
+    else {
+        nameID.classList.add('required-field');
+    }
+    var emailID = document.getElementById("email");
+    if(emailID.value != (null || '')) {
+        emailID.classList.remove('required-field');
+    }
+    else {
+        emailID.classList.add('required-field');
+    }
 }
 
 var urlString = document.location.href;
