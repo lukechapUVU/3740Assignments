@@ -1,0 +1,136 @@
+
+
+    /*----------- HEADER --------------*/
+    header {
+        position: relative;
+        h3 {
+            color: black;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-right: 5px;
+        }
+        img {
+            width: 33%;
+        }
+    }
+    
+    /*----------- NAV --------------*/
+    nav {
+        width: 115%;
+    }
+    nav .hamburger-btn {
+        display: none;
+    }
+    .hide-small {
+        display: block;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        border: none;
+        padding: .6rem 1rem;
+    }
+    .search-container {
+        width: 45%;
+        float: right;
+        form input {
+            width: 180px;
+        }
+        form.search-form input[type=text] {
+            font-size: 1rem;
+        }
+        form.search-form button {
+            font-size: 1rem;
+        }
+    }
+    li:hover > ul {
+        display: block;
+        position: absolute;
+        padding-left: 0;
+    }
+
+    /*------- COLUMN LAYOUT ----------*/
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .medium-#{$i} {width: $w; float:left;}
+    }
+
+    .galleryflex {
+        figure {
+            flex-basis: 33%;
+        }
+    }
+    
+    
+    /*----------- MAIN --------------*/
+    main .blog {
+        .articles-parent {
+            grid-template-columns: 1fr 1fr 1fr;
+            picture {
+                div {
+                    font-size: 0.7rem;
+                }
+                h6 {
+                    margin-bottom: 1.3rem;
+                    font-size: 0.8rem;
+                }
+            } 
+          
+        }
+    }
+    #cruises-page {
+        .cruises-parent {
+            display: grid;
+            grid-template-columns: 0.66fr 1.33fr;
+            grid-template-rows: auto;
+            :nth-child(2) {
+                margin-left: 3%;
+            }
+        }
+        button {
+            float: right;
+            width: 30%;
+        }
+    }
+    #agents-page {
+        img {
+            width: 50%;
+            float: right;
+        }
+    }
+    #book-page {
+        form input {
+            width: 60%;
+        }
+    }
+    main div#locationPage {
+        iframe {
+            height: 350px;
+        }
+    }
+    
+    /*----------- FOOTER --------------*/
+    footer {
+        h4 {
+            font-size: 1.2rem;
+        }
+        h6 {
+            font-size: .9rem;
+        }
+        p {
+            font-size: .8rem;
+        }
+        font-size: 1rem;
+        .footerParent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .why {
+                grid-column: 1 / span 2;
+            }
+        }
+        .footer-ending .social a {
+            flex: 0 0 20%;
+        }
+    }
