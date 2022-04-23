@@ -51,7 +51,8 @@ nav ul li ul {
     right: 0;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    float: right;
+    justify-content: flex-end;
     width: 50%;
     height: 10px;
     margin-top: 8px;
@@ -60,6 +61,7 @@ nav ul li ul {
         width: 120px;
     }
     form.search-form {
+        flex-direction: right;
         .search-button {
             float: right;
         }
@@ -304,6 +306,13 @@ main div#locationPage {
     iframe {
         width: 80%;
         height: 250px;
+    }
+}
+
+main div#servicesPage {
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
