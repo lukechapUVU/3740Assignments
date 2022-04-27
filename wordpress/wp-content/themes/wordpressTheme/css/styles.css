@@ -474,7 +474,7 @@ header img {
 nav {
   z-index: 998;
   position: relative;
-  width: 130%;
+  width: 100%;
 }
 
 nav .hamburger-btn {
@@ -871,6 +871,24 @@ main div#servicesPage img {
   height: auto;
 }
 
+#contactPage input[type=submit] {
+  background-color: #004687;
+  color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+#contactPage .contact-label {
+  font-style: italic;
+  color: gray;
+}
+
+#contactPage .contact-label input {
+  height: 60px;
+  width: 100%;
+}
+
 /*----------- FOOTER --------------*/
 #footerWrapper {
   background-color: #004687;
@@ -947,6 +965,90 @@ footer .copyright {
   content: "";
   display: table;
   clear: both;
+}
+
+div.news-content .date-post {
+  background-color: gainsboro;
+  float: left;
+  text-align: center;
+  padding-left: .3rem;
+  padding-right: .3rem;
+}
+
+div.news-content .date-post h2 {
+  margin: 1% 2%;
+  color: darkblue;
+}
+
+div.news-content .date-post p {
+  margin: 1% 2%;
+}
+
+div.news-content .post-content-text {
+  margin-left: 4rem;
+}
+
+div.news-content .post-content-text h3.news-title {
+  font-size: 1.4rem;
+  margin-bottom: 1%;
+  font-weight: 200;
+}
+
+div.news-content .post-content-text h3.news-title a {
+  text-decoration: none;
+}
+
+div.news-content .post-content-text div.news-content-excerpt {
+  line-height: 1.5rem;
+}
+
+div.news-content .post-content-text a.news-more-link {
+  background-color: gray;
+  border-radius: 10px;
+  padding: .3rem 1rem;
+  color: white;
+  font-size: 0.8rem;
+}
+
+div.news-content .post-content-text a.news-more-link :hover {
+  background-color: darkgray;
+}
+
+div.news_pagination {
+  text-align: center;
+  margin: 5% auto;
+}
+
+div.news_pagination .page-numbers {
+  background-color: gray;
+  padding: .5rem .8rem;
+  border-radius: 15px;
+}
+
+div.news_pagination a {
+  color: white;
+  text-decoration: none;
+}
+
+div.news_pagination a:hover {
+  background-color: darkgray;
+}
+
+div.news_pagination .current {
+  color: white;
+  background-color: darkblue;
+}
+
+img.newsphoto {
+  width: 100%;
+}
+
+@media only screen and (min-width: 35em) {
+  img.newsphoto {
+    width: 50%;
+    float: right;
+    margin-left: 2%;
+  }
 }
 
 /* Slider */
@@ -1235,9 +1337,6 @@ footer .copyright {
     width: 33%;
   }
   /*----------- NAV --------------*/
-  nav {
-    width: 115%;
-  }
   nav .hamburger-btn {
     display: none;
   }

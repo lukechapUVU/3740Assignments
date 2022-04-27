@@ -31,7 +31,7 @@ header {
 nav {
     z-index: 998;
     position: relative;
-    width: 130%;
+    width: 100%;
 }
 nav .hamburger-btn {
     margin: .2rem 2%;
@@ -313,6 +313,24 @@ main div#servicesPage {
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+#contactPage {
+    input[type=submit] {
+        background-color: #004687;
+        color: white;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+    }
+    .contact-label {
+        font-style: italic;
+        color: gray;
+        input {
+            height: 60px;
+            width: 100%;
+        }
     }
 }
 

@@ -1,0 +1,76 @@
+div.news-content {
+
+    .date-post {
+        background-color: gainsboro;
+        float: left;
+        text-align: center;
+        padding-left: .3rem;
+        padding-right: .3rem;
+        h2 {
+            margin: 1% 2%;
+            color: darkblue;
+        }
+        p {
+            margin: 1% 2%;
+        }
+    }
+
+    .post-content-text {
+        margin-left: 4rem;
+
+        h3.news-title {
+            font-size: 1.4rem;
+            margin-bottom: 1%;
+            font-weight: 200;
+            a {
+                text-decoration: none;
+            }
+        }
+        div.news-content-excerpt {
+            line-height: 1.5rem;
+        }
+        a.news-more-link {
+            background-color: gray;
+            border-radius: 10px;
+            padding: .3rem 1rem;
+            color: white;
+            font-size: 0.8rem;
+            :hover {
+                background-color: darkgray;
+            }
+        }
+    }
+}
+
+div.news_pagination {
+    text-align: center;
+    margin: 5% auto;
+    .page-numbers {
+        background-color: gray;
+        padding: .5rem .8rem;
+        border-radius: 15px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: darkgray;
+    }
+    .current {
+        color: white;
+        background-color: darkblue;
+    }
+}
+
+img.newsphoto {
+    width: 100%;
+}
+
+@media only screen and (min-width: 35em) {
+    img.newsphoto {
+        width: 50%;
+        float: right;
+        margin-left: 2%;
+    }
+}
