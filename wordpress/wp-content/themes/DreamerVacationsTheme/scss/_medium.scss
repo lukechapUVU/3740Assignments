@@ -1,0 +1,105 @@
+
+
+    /*----------- HEADER --------------*/
+    header {
+        div h1 {
+            font-size: 2rem;
+        }
+        img {
+            width: 20%;
+        }
+    }
+    
+    /*----------- NAV --------------*/
+    nav .hamburger-btn {
+        display: none;
+    }
+    .hide-small {
+        display: block;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        border: none;
+        padding: .6rem 1rem;
+    }
+    .search-container {
+        width: 45%;
+        float: right;
+        form input {
+            width: 180px;
+        }
+        form.search-form input[type=text] {
+            font-size: 1rem;
+        }
+        form.search-form button {
+            font-size: 1rem;
+        }
+    }
+    li:hover > ul {
+        display: block;
+        position: absolute;
+        padding-left: 0;
+    }
+
+    /*------- COLUMN LAYOUT ----------*/
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .medium-#{$i} {width: $w; float:left;}
+    }
+
+    .galleryflex {
+        figure {
+            flex-basis: 33%;
+        }
+    }
+    
+    
+    /*----------- MAIN --------------*/
+    main {
+        #contactPage {
+            display: flex;
+            div {
+                margin-left: 2%;
+            }
+            img {
+                width: 50%;
+            }
+        }
+        #destinationsPage .destination-list .destination-figure {
+            width: 46%;
+        }
+        #agentsPage {
+            .agent-card {
+                img {
+                    width: 50%;
+                }
+                display: flex;
+            }
+        }
+    }
+    
+    /*----------- FOOTER --------------*/
+    footer {
+        h4 {
+            font-size: 1.2rem;
+        }
+        h6 {
+            font-size: .9rem;
+        }
+        p {
+            font-size: .8rem;
+        }
+        font-size: 1rem;
+        .footerParent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .why {
+                grid-column: 1 / span 2;
+            }
+        }
+        .footer-ending .social a {
+            flex: 0 0 20%;
+        }
+    }
